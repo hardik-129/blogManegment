@@ -198,6 +198,8 @@ function Category() {
       <div>
         <CategoryAdd addData={category} Add={() => setCategory(false)}>
 
+          <h1 className='text-2xl text-center font-bold'>Category</h1>
+
           <div>
             <form onSubmit={handleSubmit}>
               <div className='p-7'>

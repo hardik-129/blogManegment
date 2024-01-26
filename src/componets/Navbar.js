@@ -13,7 +13,7 @@ function Navbar() {
 
 
   return (
-    <div>
+    <div >
 
       <ul className='items-center text-center  bg-white shadow-2xl font-bold'>
         <li ><NavLink to="/login" ></NavLink></li>

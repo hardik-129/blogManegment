@@ -1,12 +1,11 @@
 import React from 'react'
 
-function CategoryAdd({ addData, Add, children}) {
-          if (!addData) return null;
-
+function AddBlog({ addData, children}) {
+         //  if (!addData) return null;
   return (
     <div>
-       <div className='fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center '>
-             <div className='w-[900px]'>
+       <div className='fixed inset-0 bg-black bg-opacity-25  flex justify-center items-center '>
+             <div className='w-[80%] h-[80%]'>
                
  
                 <div className='bg-white p-3 rounded-2xl'>
@@ -23,4 +22,4 @@ function CategoryAdd({ addData, Add, children}) {
   )
 }
 
-export default CategoryAdd
+export default AddBlog

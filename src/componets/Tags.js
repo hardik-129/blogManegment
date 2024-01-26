@@ -203,6 +203,9 @@ function Tags() {
 
 <CategoryAdd addData={category} Add={() => setOpenModal(false)}>
 
+<h1 className='text-2xl text-center font-bold'>Tag</h1>
+
+
 <div>
   <form onSubmit={handleSubmit}>
     <div className='p-7'>
