@@ -58,19 +58,19 @@ function Dashbord() {
 
 
       </div  >
-      <div  className='flex   items-center text-center mt-16 text-xl font-bold flex-wrap'>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5 border-4  bg-green-100 shadow-xl rounded-md hover:bg-white">
+      <div  className='flex    items-center  mt-16 text-xl font-bold flex-wrap'>
+      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5   bg-green-100 shadow-xl rounded-md hover:bg-white">
         Blog {blog}
       </div>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5 border-4 bg-blue-100 shadow-xl rounded-md hover:bg-white">
+      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5  bg-blue-100 shadow-xl rounded-md hover:bg-white">
         Category {category}
       </div>
       </div>
       <div className='flex   items-center text-center mt-32 text-xl font-bold flex-wrap'>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5 border-4 bg-yellow-100 shadow-xl rounded-md hover:bg-white">
+      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5  bg-yellow-100 shadow-xl rounded-md hover:bg-white">
         User {user}
       </div>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5 border-4 bg-red-100 shadow-xl rounded-md hover:bg-white">
+      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5  bg-red-100 shadow-xl rounded-md hover:bg-white">
        Tags {tag}
       </div>
       </div>

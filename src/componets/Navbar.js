@@ -15,14 +15,14 @@ function Navbar() {
   return (
     <div >
 
-      <ul className='items-center text-center  bg-white shadow-2xl font-bold'>
-        <li ><NavLink to="/login" ></NavLink></li>
-        <li ><NavLink to="/" ></NavLink></li>
-        <li className='hover:bg-zinc-500 rounded-lg py-2  hover:text-white my-3 border-solid border-0 border-indigo-0' ><NavLink to="/dashbord" >Dashbord</NavLink></li>
-        <li className='hover:bg-zinc-500 rounded-lg py-2 hover:text-white my-3'><NavLink to="/category" > Category</NavLink></li>
-        <li className='hover:bg-zinc-500 rounded-lg  py-2 hover:text-white my-3'><NavLink to="/user" >User</NavLink></li>
-        <li className='hover:bg-zinc-500 rounded-lg  py-2 hover:text-white my-3'><NavLink to="/tag" >Tags</NavLink></li>
-        <li className='hover:bg-zinc-500 rounded-lg py-2 hover:text-white my-3'><NavLink to="/blog" >Blog</NavLink></li>
+      <ul className='items-center   bg-white shadow-2xl font-bold'>
+        <li >  <NavLink to="/login" ></NavLink></li>
+        <li >   <NavLink to="/dashbord" ></NavLink></li>
+        <li className='hover:bg-zinc-500 rounded-lg py-2  hover:text-white my-3 border-solid border-0 border-indigo-0' ><NavLink to="/dashbord" > <i class="text-red-800 mx-10 fa-solid fa-house"></i>  Dashbord</NavLink></li>
+        <li className='hover:bg-zinc-500 rounded-lg py-2 hover:text-white my-3'><NavLink to="/category" > <i class=" mx-10 text-green-800  fa-solid fa-bars"></i> Category</NavLink></li>
+        <li className='hover:bg-zinc-500 rounded-lg  py-2 hover:text-white my-3'><NavLink to="/user" ><i class="text-blue-800 mx-10 fa-solid fa-user"></i> User</NavLink></li>
+        <li className='hover:bg-zinc-500 rounded-lg  py-2 hover:text-white my-3'><NavLink to="/tag" ><i class="text-yellow-700 mx-10 fa-solid fa-tag"></i> Tags</NavLink></li>
+        <li className='hover:bg-zinc-500 rounded-lg py-2 hover:text-white my-3'><NavLink to="/blog" ><i class="mx-10 text-purple-950 fa-solid fa-circle-user"></i> Blog</NavLink></li>
 
       </ul>
 
