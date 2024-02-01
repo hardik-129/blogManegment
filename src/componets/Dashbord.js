@@ -58,7 +58,7 @@ function Dashbord() {
 
 
       </div  >
-      <div  className='flex    items-center  mt-16 text-xl font-bold flex-wrap'>
+      <div  className='flex  text-center  items-center  mt-16 text-xl font-bold flex-wrap'>
       <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5   bg-green-100 shadow-xl rounded-md hover:bg-white">
         Blog {blog}
       </div>

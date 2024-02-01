@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Http from '../Http'
-import CategoryAdd from './CategoryAdd';
 import axios from 'axios'
+import CategoryAdd from './CategoryAdd';
 import Swal from 'sweetalert2'
 import Pagination from './Pagination';
 

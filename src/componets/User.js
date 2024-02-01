@@ -66,7 +66,7 @@ function User() {
 
 
         console.log(users);
-        setUser(users)
+        setUser(users)  
         setOpenModal()
         User();
 
@@ -318,7 +318,7 @@ function User() {
                   </tr>
                 </table>
                 <div>
-                <Pagination links={user?.links} setUser={setUser} />
+                  <Pagination links={user?.links} setUser={setUser} />
                 </div>
               </div>
             </div>

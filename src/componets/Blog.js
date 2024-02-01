@@ -269,6 +269,8 @@ function Blog() {
   }
   const UserFilter = (event) => {
 
+    console.log(event.target.value);
+
     setUserSearceFilter(event.target.value)
 
 
@@ -277,12 +279,12 @@ function Blog() {
   return (
     <>
 
-      <div className='flex justify-end gap-10 mx-14 m-6 my-14'>
+      <div className='flex justify-end gap-10 mx-14 m-6 my-14 flex-wrap'>
 
 
 
 
-        <form class="flex items-center absolute left-80">
+        <form class="flex items-center absolute left-80 ">
           <label for="voice-search" class="sr-only">Search</label>
           <div class="relative w-full ">
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -440,7 +442,7 @@ function Blog() {
 
       </CategoryAdd>
 
-      <div className="flex flex-col mr-[10px] mx-80 border shadow-xl font-mono">
+      <div className="flex flex-col mr-[10px] mx-80 border shadow-xl font-mono ">
 
         <div className="overflow-x-auto sm:-mx-6">
           <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
@@ -488,8 +490,8 @@ function Blog() {
                   )}
                 </tbody>
               </table>
-              <div>
-                <Pagination links={user?.links} setUser={setUser} />
+              <div className='absolute right-6'>
+                <Pagination  links={user?.links} setUser={setUser} />
                 </div>
             </div>
           </div>

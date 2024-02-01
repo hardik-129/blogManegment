@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+}

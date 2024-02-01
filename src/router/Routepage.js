@@ -7,19 +7,21 @@ import Dashbord from '../componets/Dashbord';
 import User from '../componets/User';
 import Category from '../componets/Category';
 import Blog from '../componets/Blog';
+import FrontNavbar from '../frontedweb/FrontNavbar';
+
 
 const Routepage = () => {
   return (
     <>
     <Routes>
-      
+      <Route path="/" element={<FrontNavbar />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/" element={< Navbar/>} >
-      <Route path="/dashbord" element={<Dashbord />} />
-      <Route path="/category" element={<Category />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/tag" element={<Tags />} />
-      <Route path="/user" element={<User />} />
+      <Route path="/admin/dashbord" element={<Dashbord />} />
+      <Route path="/admin/category" element={<Category />} />
+      <Route path="/admin/blog" element={<Blog />} />
+      <Route path="/admin/tag" element={<Tags />} />
+      <Route path="/admin/user" element={<User />} />
 
       </Route>
     </Routes>

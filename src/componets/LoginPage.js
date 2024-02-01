@@ -50,7 +50,7 @@ function LoginPage() {
 		.then((response) => {
 			localStorage.setItem('token', response.data.data.token)
 			Http.setBearerToken(response.data.data.token)
-			navigate("/dashbord")
+			navigate("/admin/dashbord")
 			// console.log(response.data.data.token);
 			// console.log(response.data.data);
 			Toast.fire({
