@@ -131,7 +131,7 @@ function Blog() {
         let users = response.data.data.data
 
 
-        console.log(users);
+        // console.log(users);
         setUser(users)
         setOpenModal()
         blogs();

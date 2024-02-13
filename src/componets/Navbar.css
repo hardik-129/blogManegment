@@ -79,4 +79,33 @@ ul {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
+
+  @media only screen and (min-width: 1200px) {
+
+  ul{
+    width: 300px;
+  }
+  .com-logo{
+    width: auto;
+  }
+
+  }
+
+  @media only screen and (min-width: 992px) {
+
+    ul{
+      width: 300px;
+      
+      
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    ul{
+      width: 250px;
+      
+    }
+  }
+

@@ -27,11 +27,6 @@ function Dashbord() {
 
 
   useEffect(() => {
-    // console.log(name);
-
-    // let token = localStorage.getItem("token");
-    // axios.get("https://blog-api-dev.octalinfotech.com/api/dashboard",
-    //   { headers: { "Authorization": `Bearer ${token}` } })
     Http.callApi('get', url + 'dashboard')
       .then((response) => {
         
@@ -48,7 +43,7 @@ function Dashbord() {
   return (
     <div className=''>
 
-      <div className='border-gray-10 border-4 py-5 px-96 text-2xl font-black flex text-center gap-4 shadow-xl'>
+      <div className='border-gray-10 border-4 py-5 px-96 text-2xl font-black flex text-center gap-4 shadow-xl max-md:hidden '>
         <div>
           <img className='contect-img' src="https://ims-api.octalinfotech.com/images/avatar.png" alt="" />
         </div>
@@ -58,22 +53,24 @@ function Dashbord() {
 
 
       </div  >
-      <div  className='flex  text-center  items-center  mt-16 text-xl font-bold flex-wrap'>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5   bg-green-100 shadow-xl rounded-md hover:bg-white">
+     <div className=''>
+     <div  className='flex text-center gap-x-72   mt-16 text-xl font-bold flex-wrap md:flex md:justify-center items-center   '>
+      <div  className="  px-44 mt-8 box-border h-22 w-min p-5   bg-green-100 shadow-xl rounded-md hover:bg-white">
         Blog {blog}
       </div>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5  bg-blue-100 shadow-xl rounded-md hover:bg-white">
+      <div  className="  px-40 mt-8 box-border h-22 w-min p-5  bg-blue-100 shadow-xl rounded-md hover:bg-white">
         Category {category}
       </div>
       </div>
-      <div className='flex   items-center text-center mt-32 text-xl font-bold flex-wrap'>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5  bg-yellow-100 shadow-xl rounded-md hover:bg-white">
+      <div className='flex  text-center gap-x-72 mt-32 text-xl font-bold flex-wrap md:flex justify-center items-center'>
+      <div  className="  px-44 mt-8 box-border h-22 w-min p-5  bg-yellow-100 shadow-xl rounded-md hover:bg-white">
         User {user}
       </div>
-      <div  className=" ml-96 px-48 mt-8 box-border h-22 w-min p-5  bg-red-100 shadow-xl rounded-md hover:bg-white">
+      <div  className="  px-44 mt-8 box-border h-22 w-min p-5  bg-red-100 shadow-xl rounded-md hover:bg-white">
        Tags {tag}
       </div>
       </div>
+     </div>
      
 
     </div>
