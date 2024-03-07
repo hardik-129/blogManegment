@@ -37,12 +37,7 @@ function Blogpage() {
                       />
                     </div>
                     <div className="text-base text-center cursor-pointer mt-2 justify-content">
-                      {/* <div
-                            style={{ maxWidth: "300px" }}
-                            className="text-xs text-gray-900 font-semibold px-3 py-2 break-words w-full truncate text-center "
-                          >
-                            {data.description}
-                          </div> */}
+                     
                       <div className="flex justify-center gap-2 items-center">
                         <div>
                           <img
@@ -53,15 +48,15 @@ function Blogpage() {
                         </div>
                         <div className="flex gap-24">
                           <span className="text-xs dark:text-gray-400 flex underline">
-                            {data.user_name}
+                            <span className="text-black">{data.user_name}</span>
                           </span>
                           <span className="text-xs dark:text-gray-400 flex underline">
-                            {data.date}
+                            <span className="text-black">{data.date}</span>
                           </span>
                         </div>
                       </div>
                       <div className="font-bold text-center text-2xl mt-10 uppercase ">
-                        {data.title}
+                        <span className="text-black">{data.title}</span>
                       </div>
                     </div>
                   </div>

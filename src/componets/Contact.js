@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Http from '../Http'
-import Pagination from './Pagination';
+import Pagination from '../componets/Paginetion';
+
 
 
 const url = (process.env.REACT_APP_API_KEY);
@@ -17,7 +18,7 @@ function Contact() {
           
   function contact(TitleSearchFilter='') {
 
-            Http.callApi('get', url + `contact-us/index?search=${TitleSearchFilter}`)
+            Http.callApi('get', url + `contact-us/index?search=${TitleSearchFilter}`) 
             .then((response) => {
       
               let users = response.data.data.data
@@ -96,7 +97,9 @@ function Contact() {
                 </table>
                 <div>
                 </div>
-             <Pagination links={user?.links} setUser={setUser} />
+                <div className='absolute right-6'>
+                <Pagination  links={user?.links} setUser={setUser} />
+                </div>
               </div>
             </div>
           </div>

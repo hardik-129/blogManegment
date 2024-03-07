@@ -15,8 +15,7 @@ function Pagination({ links, setUser }) {
           const handleClickLink = (link) => {
                     Http.callApi('get', link?.url)
                         .then((response) => {
-                            // setCategory(response.data.data.category);
-                            // console.log(response.data.data, 'blog data is here');
+                           
                             let users = response.data.data;
                             setUser(users)
                         })

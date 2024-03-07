@@ -5,11 +5,13 @@ import "./Loginpage.css"
 // import Swal from 'sweetalert2'
 import Swal from 'sweetalert2'
 import Http from '../Http'
+import useCountStore from './Zustand/Store'
 
 const url = (process.env.REACT_APP_API_KEY);
 
 function LoginPage() {
 	// console.log(url);
+	const data = useCountStore((state) => state.data)
 
 	
 
@@ -50,9 +52,10 @@ function LoginPage() {
 		.then((response) => {
 			localStorage.setItem('token', response.data.data.token)
 			Http.setBearerToken(response.data.data.token)
+			console.warn(JSON.stringify(data.email));
+
 			navigate("/admin/dashbord")
-			// console.log(response.data.data.token);
-			// console.log(response.data.data);
+			
 			Toast.fire({
 				icon: "success",
 				title: response.data.message,
@@ -106,6 +109,6 @@ function LoginPage() {
 			</div>
 		</div>
 	)
-}
+};
 
 export default LoginPage;

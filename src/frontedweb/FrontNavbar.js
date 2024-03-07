@@ -1,14 +1,23 @@
 import { NavLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 
 
 
 // import axios from 'axios'
 
 function FrontNavbar() {
+  const navigate = useNavigate();
 
+  const contact = ()=>{
+    navigate("/contect")
+  }
+
+  const home = ()=>{
+    navigate("/")
+  }
  
   return (
-    <div  className="bg-gradient-to-r from-indigo-50">
+    <div  className="bg-gradient-to-r from-indigo-50 list-none">
       <header class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-4 dark:bg-gray-800 border shadow-xl ">
         <div className="flex items-center gap-3 px-16">
           <div>
@@ -20,9 +29,9 @@ function FrontNavbar() {
           </div>
 
           <div>
-            <NavLink className="sm:order-1 flex-none text-xl font-semibold dark:text-white uppercase underline">
+            <li className="sm:order-1 flex-none text-xl font-semibold dark:text-white uppercase underline">
               Octal Infotech
-            </NavLink>
+            </li>
           </div>
         </div>
         <nav
@@ -127,21 +136,21 @@ function FrontNavbar() {
             id="navbar-alignment"
             class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:grow-0 sm:basis-auto sm:block sm:order-2 "
           >
-            <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
-              <NavLink className="font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+            <div class="cursor-pointer flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:mt-0 sm:ps-5">
+              <li onClick={home} className="font-medium dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                 Home
-              </NavLink>
-              <NavLink className="underline font-bold text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+              </li>
+              <li className="underline font-bold text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                 Blog
-              </NavLink>
+              </li>
 
-              <NavLink className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+              <li className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                 Category
-              </NavLink>
+              </li>
 
-              <NavLink className="font-medium text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
+              <li onClick={contact} className="font-medium cursor-pointer text-gray-600 hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600">
                 Contact Us
-              </NavLink>
+              </li>
             </div>
           </div>
         </nav>

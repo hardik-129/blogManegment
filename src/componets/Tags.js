@@ -86,7 +86,6 @@ function Tags() {
 
 
   function User(TitleSearchFilter='') {
-
     Http.callApi('get', url + `tages?search=${TitleSearchFilter}`)
       .then((response) => {
 
@@ -94,6 +93,7 @@ function Tags() {
 
         setUser(users)
         // console.log(users);
+
 
       })
       .catch((error) => {
@@ -214,13 +214,14 @@ function Tags() {
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7v3a5.006 5.006 0 0 1-5 5H6a5.006 5.006 0 0 1-5-5V7m7 9v3m-3 0h6M7 1h2a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3Z"/>
             </svg>
         </button>
+
     </div>
    
 </form>
 
 <div className='flex justify-end m-6'>
       
-      <button className='text-white text-xl  bg-green-600 -400-700 hover:bg-slate-700  focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded  px-5 py-2.5 text-center me-2 mb-2' onClick={() => setOpenModal(true)}>ADD TAGS + </button>
+      <button className='text-white text-xl  bg-black -400-700 hover:bg-slate-700  focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded  px-5 py-2.5 text-center me-2 mb-2' onClick={() => setOpenModal(true)}>ADD TAGS + </button>
     </div>
 
 <CategoryAdd addData={category} Add={() => setOpenModal(false)}>
@@ -276,7 +277,7 @@ function Tags() {
                         <div className='flex items-center text-center mt-4 justify-center space-x-7 '>
                           <div >
                          <td>
-                         <i onClick={() => showButton(data.id)}   className="fa-solid fa-pen-to-square text-green-700 hover:text-slate-700 text-2xl"></i>
+                         <i onClick={() => showButton(data.id)}   className="fa-solid fa-pen-to-square text-black hover:text-slate-700 text-2xl"></i>
                          </td>
                             {/* <td><button onClick={() => showButton(data.id)} className='text-white text-xl  bg-green-600 -400-700 hover:bg-slate-700  focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded  px-6 py-2 text-center me-2 mb-2'>Edit</button></td> */}
                           </div>

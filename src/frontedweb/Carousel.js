@@ -95,7 +95,7 @@ function Carousel() {
                         </div>
                         <Link to={`/category/${data.id}`}>
                             <div className={` pt-4 font-bold  hover:border-b-4 border-black ${data.id == currentID && 'border-b-4'}`} >
-                                <h1 className='focus:bg-red-900'>{data.name}</h1>
+                                <h1 className='focus:bg-red-900 text-black'><span>{data.name}</span></h1>
                             </div>
                         </Link>
                     </div>

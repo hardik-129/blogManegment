@@ -216,7 +216,7 @@ function Category() {
 
       <div className='flex justify-end m-6'>
       
-        <button className='text-white text-xl  bg-green-600 -400-700 hover:bg-slate-700  focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded  px-5 py-2.5 text-center me-2 mb-2' onClick={() => setCategory(true)}>ADD CATEGORY + </button>
+        <button className='text-white text-xl  bg-black -400-700 hover:bg-slate-700  focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded  px-5 py-2.5 text-center me-2 mb-2' onClick={() => setCategory(true)}>ADD CATEGORY + </button>
       </div>
 
       <div>
@@ -254,11 +254,11 @@ function Category() {
           </div>
 
         </CategoryAdd>
-        <div className="flex flex-col mx-96 border shadow-xl font-mono">
+        <div className="flex mt-24 flex-col mt mx-96 border shadow-xl font-mono">
           <div className="overflow-x-auto sm:-mx-6">
             <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
               <div className="overflow-hidden">
-                <table className="min-w-full text-center text-sm font-light">
+                <table className="min-w-full text-center text-sm font-light bg-white">
                   <thead className="border-b font-medium dark:border-neutral-500">
                     <tr>
                       <th scope="col" className="px-6 py-2">ID</th>
@@ -276,7 +276,7 @@ function Category() {
                         <div className='flex items-center text-center mt-4 justify-center space-x-7 '>
                           <div >
                          <td>
-                         <i onClick={() => showButton(data.id)}  className="fa-solid fa-pen-to-square text-green-700 hover:text-slate-700 text-2xl"></i>
+                         <i onClick={() => showButton(data.id)}  className="fa-solid fa-pen-to-square text-black hover:text-slate-700 text-2xl"></i>
                          </td>
                             {/* <td><button onClick={() => showButton(data.id)} className='text-white text-xl  bg-green-600 -400-700 hover:bg-slate-700  focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded  px-6 py-2 text-center me-2 mb-2'>Edit</button></td> */}
                           </div>

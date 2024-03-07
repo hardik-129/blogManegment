@@ -15,7 +15,7 @@ function AxiosMiddleware(method, url, data, options) {
         case 'delete':
             return axios.delete(url, { data: data, headers: options });
         default:
-            console.log(method);
+            // console.log(method);
             break;
     }
 

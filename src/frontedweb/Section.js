@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom'
 function Section() {
   const navigate = useNavigate();
 
-  navigate("/contect")
+  // navigate("/contect")
   return (
     <div>
 

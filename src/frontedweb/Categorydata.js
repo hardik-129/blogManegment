@@ -74,15 +74,15 @@ function Categorydata() {
                   </div>
                   <div className="flex gap-24">
                     <span className="text-xs dark:text-gray-400  underline">
-                      {data.user_name}
+                      <span className="text-black ">{data.user_name}</span>
                     </span>
                     <span className="text-xs dark:text-gray-400 flex underline">
-                      {data.date}
+                      <span className="text-black ">{data.date}</span>
                     </span>
                   </div>
                 </div>
                 <div className="font-bold  text-2xl mt-10 uppercase ">
-                  {data.title}
+                  <span className="text-black ">{data.title}</span>
                 </div>
               </div>
             </div>

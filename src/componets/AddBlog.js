@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AddBlog({ addData, children}) {
+function AddBlog({ children}) {
          //  if (!addData) return null;
   return (
     <div>
