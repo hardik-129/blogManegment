@@ -1,6 +1,6 @@
-import { create } from "zustand";
-import { devtools } from "zustand/middleware";
-import { produce } from "immer";
+// import { create } from "zustand";
+// import { devtools } from "zustand/middleware";
+// import { produce } from "immer";
 
 // const initialState = create((set)=>({
 
@@ -11,27 +11,31 @@ import { produce } from "immer";
 // }))  
 
 
-const useCountStore = create(
+// const useCountStore = create(
 
 
-          devtools((get, set)=>({
+//           devtools((get, set)=>({
 
-                    data: {
-                              email: "admin@gmail.com",
-                              password : "admin@123"
-                    },
-                    auth: (payload) => {
-                      set(
-                        produce((draft) => {
-                          draft.data = payload;
-                        })
-                      );
-                    },
-                
+//                     token: "",
+//                     auth: (payload) => {
+//                       set(
+//                         produce((draft) => {
+//                           draft.token = payload;
+//                         })
+//                       );
+//                     },
+//                     userName: "",
+//                     name : (payload) => {
+//                       set(
+//                         produce((draft) => {
+//                           draft.userName = payload;
+//                         })
+//                       );
+//                     },
 
-          }))
+//           }))
 
-);
+// );
 
-export default useCountStore;
+// export default useCountStore;
 

@@ -5,13 +5,15 @@ import "./Loginpage.css"
 // import Swal from 'sweetalert2'
 import Swal from 'sweetalert2'
 import Http from '../Http'
-import useCountStore from './Zustand/Store'
+// import useCountStore from './Zustand/Store'
 
 const url = (process.env.REACT_APP_API_KEY);
 
 function LoginPage() {
 	// console.log(url);
-	const data = useCountStore((state) => state.data)
+	// const auth = useCountStore((state) => state.auth)
+
+	
 
 	
 
@@ -50,9 +52,15 @@ function LoginPage() {
 		Http.callApi('post',url + 'login',payload)
 		// axios.post("https://blog-api-dev.octalinfotech.com/api/login", payload)
 		.then((response) => {
-			localStorage.setItem('token', response.data.data.token)
-			Http.setBearerToken(response.data.data.token)
-			console.warn(JSON.stringify(data.email));
+			localStorage.setItem('token', response.data.data.token);
+			
+			
+			
+			
+			// console.warn(auth(response.data.data.data, "1111"));
+			
+			Http.setBearerToken(response.data.data.token);
+			
 
 			navigate("/admin/dashbord")
 			
@@ -83,11 +91,9 @@ function LoginPage() {
 					<div className="screen__content">
 						<form className="login">
 							<div className="login__field">
-								<i className="login__icon fas fa-user"></i>
 								<input value={email} onChange={handleEmail} type="text" className="login__input" placeholder="User name " />
 							</div>
 							<div className="login__field">
-								<i className="login__icon fas fa-lock"></i>
 								<input value={password} onChange={handlePassword} type="password" className="login__input" placeholder="Password" />
 							</div>
 							<button onClick={handleSubmit} className="button login__submit">
@@ -110,5 +116,4 @@ function LoginPage() {
 		</div>
 	)
 };
-
 export default LoginPage;

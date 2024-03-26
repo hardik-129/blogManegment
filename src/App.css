@@ -56,3 +56,30 @@
   width: 100%;
   display: block;
 }
+
+.position-relative {
+  position: relative;
+}
+.position-absolute{
+  position: absolute;
+  right:-14px;
+top:  -34%;
+
+}
+.position-left{
+  position: absolute;
+  left: 17%;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .position-left{
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+}
+

@@ -78,6 +78,16 @@ body {
     display: block;
   }
 
+  .manu{
+    width: 80%;
+    position: fixed;
+    height: 100vh;
+  }
+
+  .activeManu{
+    left: 0%
+  }
+
   @media only screen and (min-width: 1200px) {
 
   ul{
@@ -99,10 +109,10 @@ body {
 
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 1002px) {
 
     ul{
-      width: 250px;
+      left: -100%;
       
     }
   }

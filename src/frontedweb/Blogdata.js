@@ -17,8 +17,10 @@ function Blogdata() {
       })
 
       .then((res) => {
-        let users = res.data.data.blog;
+        let users = res.data.data;
+        console.warn(users)
         setUser(users);
+
       })
       .catch((error) => {
         console.log(error);

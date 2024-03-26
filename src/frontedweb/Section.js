@@ -4,11 +4,11 @@ import Blogpage from './Blogpage'
 import CarouselPage from './CarouselPage'
 import Footer from './Footer'
 import FrontNavbar from './FrontNavbar'
-import { useNavigate } from 'react-router-dom'
+// import { useNavigate } from 'react-router-dom'
 
 
 function Section() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // navigate("/contect")
   return (

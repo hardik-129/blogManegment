@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import Pagination from './Pagination';
 
 
+
 const url = (process.env.REACT_APP_API_KEY);
 
 function Category() {
@@ -45,11 +46,9 @@ function Category() {
 
   const handleSubmit = (e) => {
 
-
     const data = new FormData();
     data.append("image", image)
     data.append("name", input.name)
-    // alert()
     e.preventDefault()
     setInput();
 
@@ -197,6 +196,7 @@ function Category() {
     <>
 
 <form class="flex items-center absolute left-96 mt-6 ">   
+
     <label for="voice-search" class="sr-only">Search</label>
     <div class="relative w-full ">
         <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -223,7 +223,6 @@ function Category() {
         <CategoryAdd addData={category} Add={() => setCategory(false)}>
 
           <h1 className='text-2xl text-center font-bold'>Category</h1>
-
           <div>
             <form onSubmit={handleSubmit}>
               <div className='p-7'>

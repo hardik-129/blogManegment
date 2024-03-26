@@ -12,7 +12,7 @@ function Blogpage() {
       let users = response.data.data.data;
 
       setUser(users);
-      // console.log(users);
+      // console.warn(users);
     });
   }
 
