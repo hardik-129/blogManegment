@@ -1,25 +1,22 @@
 import React, { useEffect, useState } from "react";
-// import axios from 'axios'
 import Http from "../Http";
-import Card from "./Card";
-// import { useNavigate } from 'react-router-dom'
+
+
 
 const url = process.env.REACT_APP_API_KEY;
 
 function Dashbord() {
-  // const navegate = useNavigate();
+  
 
   const name = localStorage.getItem("name");
-  // const tokan = localStorage.getItem("token");
 
-  // let token = localStorage.getItem("token")
-
+  
   const [user, setUser] = useState();
   const [category, setCategory] = useState();
   const [blog, setBlog] = useState();
   const [tag, setTags] = useState();
 
-  //  = localStorage.getItem('name');
+
 
   useEffect(() => {
     Http.callApi("get", url + "dashboard")
@@ -48,8 +45,6 @@ function Dashbord() {
         </div>
       </div>
       <div className="">
-  
-
         <div className="flex text-center gap-x-10 mt-32 text-xl position-left absolute left-0 font-bold flex-wrap md:flex  items-center ">
           <div className=" px-44 mt-8 box-border  w-min p-5   bg-green-100 shadow-xl rounded-md hover:bg-white">
             Blog {blog}

@@ -1,119 +1,112 @@
-import React, {  useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import "./Loginpage.css"
-// import axios from "axios"
-// import Swal from 'sweetalert2'
-import Swal from 'sweetalert2'
-import Http from '../Http'
-// import useCountStore from './Zustand/Store'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Loginpage.css";
+import Swal from "sweetalert2";
+import Http from "../Http";
 
-const url = (process.env.REACT_APP_API_KEY);
+
+const url = process.env.REACT_APP_API_KEY;
 
 function LoginPage() {
-	// console.log(url);
-	// const auth = useCountStore((state) => state.auth)
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    },
+  });
 
-	
+  const navigate = useNavigate();
 
-	
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-	const Toast = Swal.mixin({
-		toast: true,
-		position: "top-end",
-		showConfirmButton: false,
-		timer: 2000,
-		timerProgressBar: true,
-		didOpen: (toast) => {
-		  toast.onmouseenter = Swal.stopTimer;
-		  toast.onmouseleave = Swal.resumeTimer;
-		}
-	        });
-	
-	const navigate = useNavigate();
+  const handleEmail = (event) => {
+    setEmail(event.target.value);
+  };
 
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
+  const handlePassword = (evant) => {
+    setPassword(evant.target.value);
+  };
 
-	const handleEmail = (event) => {
-		setEmail(event.target.value)
-	}
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-	const handlePassword = (evant) => {
+    let payload = { email, password };
 
-		setPassword(evant.target.value)
-	}
+    Http.callApi("post", url + "login", payload)
+      .then((response) => {
+        localStorage.setItem("token", response.data.data.token);
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
+        Http.setBearerToken(response.data.data.token);
 
-		
-		let payload = { email, password }
+        navigate("/admin/dashbord");
 
-		Http.callApi('post',url + 'login',payload)
-		// axios.post("https://blog-api-dev.octalinfotech.com/api/login", payload)
-		.then((response) => {
-			localStorage.setItem('token', response.data.data.token);
-			
-			
-			
-			
-			// console.warn(auth(response.data.data.data, "1111"));
-			
-			Http.setBearerToken(response.data.data.token);
-			
+        Toast.fire({
+          icon: "success",
+          title: response.data.message,
+        });
+        localStorage.setItem("name", response.data.data.name);
+      })
+      .catch((error) => {
+        console.log(error);
 
-			navigate("/admin/dashbord")
-			
-			Toast.fire({
-				icon: "success",
-				title: response.data.message,
-			        });
-			        localStorage.setItem("name",response.data.data.name);
+        Toast.fire({
+          icon: "error",
+          title: error.response.data.message,
+        });
+      });
+  };
 
-		}).catch((error)=>{
-			console.log(error);
+  return (
+    <div>
+      <div className="container">
+        <img
+          className="login-img"
+          src="https://lh3.googleusercontent.com/p/AF1QipOMj-dseZ54sUzotNCrFSHiBnOGUrpI64eCxSzM=s680-w680-h510"
+          alt=""
+        />
+        <div className="screen ">
+          <div className="screen__content">
+            <form className="login">
+              <div className="login__field">
+                <input
+                  value={email}
+                  onChange={handleEmail}
+                  type="text"
+                  className="login__input"
+                  placeholder="User name "
+                />
+              </div>
+              <div className="login__field">
+                <input
+                  value={password}
+                  onChange={handlePassword}
+                  type="password"
+                  className="login__input"
+                  placeholder="Password"
+                />
+              </div>
+              <button onClick={handleSubmit} className="button login__submit">
+                <span className="button__text">Log In</span>
+                <i className="button__icon fas fa-chevron-right"></i>
+              </button>
+            </form>
+          </div>
 
-			Toast.fire({
-				icon : "error",
-				title: error.response.data.message,
-			})
-
-
-
-		})
-	}
-
-	return (
-		<div>
-			<div className="container">
-				<img className='login-img' src="https://lh3.googleusercontent.com/p/AF1QipOMj-dseZ54sUzotNCrFSHiBnOGUrpI64eCxSzM=s680-w680-h510" alt="" />
-				<div className="screen ">
-					<div className="screen__content">
-						<form className="login">
-							<div className="login__field">
-								<input value={email} onChange={handleEmail} type="text" className="login__input" placeholder="User name " />
-							</div>
-							<div className="login__field">
-								<input value={password} onChange={handlePassword} type="password" className="login__input" placeholder="Password" />
-							</div>
-							<button onClick={handleSubmit} className="button login__submit">
-								<span className="button__text">Log In</span>
-								<i className="button__icon fas fa-chevron-right"></i>
-							</button>
-
-						</form>
-
-					</div>
-
-					<div className="screen__background">
-						<span className="screen__background__shape screen__background__shape4"></span>
-						<span className="screen__background__shape screen__background__shape3"></span>
-						<span className="screen__background__shape screen__background__shape2"></span>
-						<span className="screen__background__shape screen__background__shape1"></span>
-					</div>
-				</div>
-			</div>
-		</div>
-	)
-};
+          <div className="screen__background">
+            <span className="screen__background__shape screen__background__shape4"></span>
+            <span className="screen__background__shape screen__background__shape3"></span>
+            <span className="screen__background__shape screen__background__shape2"></span>
+            <span className="screen__background__shape screen__background__shape1"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 export default LoginPage;
