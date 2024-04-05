@@ -33,7 +33,7 @@ function Pagination({ links, setUser }) {
                                     (<div
                                         className="mr-1 mb-1 px-4 py-3 text-sm leading-4 text-gray-400 border rounded"
                                     >{link.label}</div>) :
-                                    (<a href='#'
+                                    (<a href='/'
                                         onClick={() => handleClickLink(link)}
                                         className={getClassName(link.active)}
                                         to={link.url}
